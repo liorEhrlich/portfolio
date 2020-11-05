@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+import styled from '@emotion/styled'
+import { ThemeProvider } from 'emotion-theming'
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>    
+      <Wrapper>
+        <Name>I'm Leor Ehrlich</Name>
+      </Wrapper>
+    </ThemeProvider>
   );
 }
+
+const Wrapper = styled.div`
+  background-color: ${props => props.theme.colors.lightOrange};
+`
+
+const Name = styled.h1`
+  color: ${props => props.theme.colors.pink};
+`
 
 export default App;
