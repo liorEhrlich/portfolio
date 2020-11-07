@@ -1,17 +1,39 @@
 import styled from '@emotion/styled'
 import { ThemeProvider } from 'emotion-theming'
-import Canvas from './canvas'
 
+import Canvas from './canvas'
 import theme from './theme'
 
 
 function App() {
-  const draw = (ctx, frameCount) => {
-    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height)
-    ctx.fillStyle = '#000000'
-    ctx.beginPath()
-    ctx.arc(50, 100, 20*Math.sin(frameCount*0.05)**2, 0, 2*Math.PI)
-    ctx.fill()
+const createGrid = () => {
+  const points = []
+  const count = 4
+  for (let x = 0; x < count; x++){
+    for (let y = 0; y < count; y++){
+      const u = x / (count - 1)
+      const v = y / (count - 1)
+      points.push([u,v])
+    }
+  }
+  return points
+}
+
+const points = createGrid();
+
+  const draw = (ctx,canvas, frameCount) => {
+    ctx.fillStyle = 'white'
+    ctx.fillRect(0,0,canvas.width, canvas.height)
+
+    points.forEach(([u,v]) => {
+      const x = u * canvas.width
+      const y = v * canvas.height
+
+      ctx.beginPath()
+      ctx.arc(x,y,10,0,Math.PI * 2, false)
+      ctx.stroke()
+    })
+
   }
 
   return (
