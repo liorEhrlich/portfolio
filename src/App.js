@@ -12,7 +12,7 @@ function App() {
         styles={css`
               body {
                 background-color: ${theme.colors.background};
-                margin: 0;
+                margin: 0 30px;
                 padding: 0;
                 height: '100vh';
                 width: '100vw';
