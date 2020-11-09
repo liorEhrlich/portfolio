@@ -2,8 +2,9 @@ import { ThemeProvider } from 'emotion-theming'
 import { Global, css } from '@emotion/core'
 
 import theme from './theme'
-import Introduction from './components/Introduction'
+import Home from './components/Home'
 import NavBar from './components/NavBar';
+import About from './components/About';
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
             `}
       />
       <NavBar/>
-      <Introduction/>
+      <Home/>
+      <About/>
     </ThemeProvider>
   );
 }
