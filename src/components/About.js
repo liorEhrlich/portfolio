@@ -2,7 +2,7 @@ import styled from "@emotion/styled"
 
 const About = () => (
   <Wrapper>
-      <Title>
+      <Title id='about'>
         About myself
       </Title>
 
@@ -11,7 +11,7 @@ const About = () => (
       </Description>
       <Description>
       I am a web developer, specializing in the <b>React js</b> Framework. 
-During my career, I have built <b>accessible</b>, <b>responsive</b>, and user friendly websites.
+During my career, I have built <b>accessible</b>, <b>responsive</b>, and <b>user friendly</b> websites.
 </Description>
       <Description>
         It is my belief that The important part of developing a website, other than it being as bug free as possible, is writing readable, maintainable code.
@@ -34,7 +34,7 @@ Here are a few of the technologies I have recently worked with:
 )
 
 const Wrapper = styled.div`
-  margin-top:450px;
+  margin-top:320px;
 `
 
 const Technologies = styled.ul`
@@ -52,6 +52,11 @@ const Li = styled.li`
   font-size: 14px;
   color: ${props => props.theme.colors.bright};
   height: 30px;
+  width: fit-content;
+  
+  :hover{
+    color: ${props => props.theme.colors.primary};
+  }
 `
 
 const Description = styled.p`
@@ -61,8 +66,9 @@ const Description = styled.p`
 `
 
 const Title = styled.div`
+  padding-top: 25px;
   font-size: 26px;
-  color: ${props => props.theme.colors.tertiary}
+  color: ${props => props.theme.colors.primary}
 `
 
 export default About

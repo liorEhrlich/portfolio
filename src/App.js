@@ -5,6 +5,8 @@ import theme from './theme'
 import Home from './components/Home'
 import NavBar from './components/NavBar';
 import About from './components/About';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
 
 function App() {
   return (
@@ -17,13 +19,15 @@ function App() {
                 padding: 0;
                 height: '100vh';
                 width: '100vw';
-                font-family: monospace;
+                font-family: 'Barlow',monospace, sans-serif;
               }
             `}
       />
       <NavBar/>
       <Home/>
       <About/>
+      <Experience/>
+      <Projects />
     </ThemeProvider>
   );
 }
