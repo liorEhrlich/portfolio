@@ -23,10 +23,10 @@ const NavBar = () => (
     <a href='#contact'>
     <Li>Contact</Li>
     </a>
-    <ImageAnchor href='https://www.linkedin.com/in/lior-ehrlich-064980117/'>
-      <LinkedinImage src={linkedinImage} alt='linkedin'/>
+    <ImageAnchor target="_blank" href='https://www.linkedin.com/in/lior-ehrlich-064980117/'>
+      <LinkedinImage rel="noreferrer" src={linkedinImage} alt='linkedin'/>
     </ImageAnchor>
-    <ImageAnchor href='https://github.com/liorEhrlich'>
+    <ImageAnchor rel="noreferrer" target="_blank" href='https://github.com/liorEhrlich'>
       <GithubImage src={githubImage} alt='github'/>
     </ImageAnchor>
     </Links>
@@ -74,11 +74,21 @@ const HomeLogo = styled(Image)`
 const LinkedinImage = styled(Image)`
   top: -2px;
   left: 15px;
+
+  @media only screen and (max-width: 420px)  {
+    top: -13px;
+    right: 10px;
+  }
 `
 
 const GithubImage = styled(Image)`
   top: -5px;
   left: 50px;
+  
+  @media only screen and (max-width: 420px)  {
+    top: -16px;
+    right: 10px;
+  }
 `
 
 const Links = styled.ul`
@@ -104,6 +114,10 @@ const Li = styled.li`
 
   :hover{
     transform: scale(1.1);
+  }
+
+  @media only screen and (max-width: 420px)  {
+    display: none;
   }
 `
 

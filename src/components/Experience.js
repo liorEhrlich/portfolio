@@ -1,7 +1,10 @@
 import styled from "@emotion/styled"
 
+import Title from './common/Title'
+import SectionWrapper from './common/SectionWrapper'
+
 const Experience = () => (
-<Wrapper> 
+<SectionWrapper> 
   <Title id='experience'>
     Work Experience
   </Title>
@@ -49,30 +52,29 @@ Backend development for Salesforce clients using Apex language (Apex is based on
 
   <Work>
   <div>
-  <WorkPlace>Salesforce</WorkPlace>
-  <WorkDesc>Field Service Lightning Product
+  <WorkPlace>Cyberbit</WorkPlace>
+  <WorkDesc>SCADA protocol
+Analyzing product
 </WorkDesc>
-  <Years>2017 - 2018</Years>
+  <Years>2014 - 2016</Years>
   </div>
 
   <JobDesc>
   Quality Assurance Engineer
   <br/>
-  Write, review, revise and verify quality standards and test procedures for program design and product evaluation.
+  Manual testing in both Windows and Linux operating systems in all four testing phases; unit, integration, system, acceptance. Managed bugs using JIRA, and documented tests in Testrail.
+  <br/>
+Researching SCADA communication protocols to analyse the protocol at bit level, and for learning its security elements to base the product’s rules upon.
 <br/>
-Implement best practices as a Salesforce admin in the quality assurance team.
+Perform regression, integration, platform and performance testing to certify the stability and usability of software systems. 
 <br/>
-Create and maintain test requirements, cases, and monitor scripts for each testing cycle 
+Develop and execute test programs that helped improve accuracy of QA results. 
 <br/>
-Provide QA status reporting and escalate issues/risks in a timely manner to Management and assist in resolution.
+Parsing from bytes to protocols fields according to the protocol documentation with Wireshark application. 
   </JobDesc>
   </Work>
-</Wrapper>
+</SectionWrapper>
 )
-
-const Wrapper = styled.div`
-  margin-top:240px;
-`
 
 const Work = styled.div`
   display:flex;
@@ -102,13 +104,6 @@ const Years = styled.div`
 const WorkPlace = styled.div`
   font-size: 20px;
   color: ${props => props.theme.colors.secondary};
-`
-
-const Title = styled.div`
-  padding-top: 25px;
-  font-size: 26px;
-  color: ${props => props.theme.colors.primary};
-  margin-bottom: 20px;
 `
 
 export default Experience

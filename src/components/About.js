@@ -1,7 +1,10 @@
 import styled from "@emotion/styled"
 
+import Title from './common/Title'
+import SectionWrapper from './common/SectionWrapper'
+
 const About = () => (
-  <Wrapper>
+  <SectionWrapper>
       <Title id='about'>
         About myself
       </Title>
@@ -30,12 +33,8 @@ Here are a few of the technologies I have recently worked with:
         <Li>Babel</Li>
         <Li>npm, yarn</Li>
       </Technologies>
-  </Wrapper>
+  </SectionWrapper>
 )
-
-const Wrapper = styled.div`
-  margin-top:320px;
-`
 
 const Technologies = styled.ul`
   list-style-type: none;
@@ -63,12 +62,6 @@ const Description = styled.p`
   font-size: 16px;
   max-width: 680px;
   color: ${props => props.theme.colors.bright}
-`
-
-const Title = styled.div`
-  padding-top: 25px;
-  font-size: 26px;
-  color: ${props => props.theme.colors.primary}
 `
 
 export default About
