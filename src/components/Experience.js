@@ -50,6 +50,29 @@ Backend development for Salesforce clients using Apex language (Apex is based on
   </JobDesc>
   </Work>
 
+  
+<Work>
+  <div>
+  <WorkPlace>Salesforce</WorkPlace>
+  <WorkDesc>Field Service Lightning,
+Salesfoce product
+</WorkDesc>
+  <Years>2017 - 2018</Years>
+  </div>
+
+  <JobDesc>
+  Quality Assurance Engineer 
+    <br/>
+    Write, review, revise and verify quality standards and test procedures for program design and product evaluation.
+    <br/>
+Implement best practices as a Salesforce admin in the quality assurance team.
+<br/>
+Create and maintain test requirements, cases, and monitor scripts for each testing cycle 
+<br/>
+Provide QA status reporting and escalate issues/risks in a timely manner to Management and assist in resolution.
+  </JobDesc>
+  </Work>
+
   <Work>
   <div>
   <WorkPlace>Cyberbit</WorkPlace>
